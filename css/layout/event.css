@@ -1,0 +1,64 @@
+.event {
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.event h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.event__left {
+  float: left;
+  width: 66%;
+  margin-right: 2%;
+}
+
+.event__box2,
+.event__box3 {
+  float: left;
+  width: 50%;
+}
+
+.event__right {
+  float: left;
+  width: 32%;
+}
+
+@media screen and (max-width:768px) {
+  #event .row {
+    padding: 0 24px;
+  }
+
+  .event {
+    padding: 24px;
+    background: #fff;
+  }
+
+  .event h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .event__left {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .event__right {
+    display: none;
+  }
+}
+
+@media screen and (max-width:600px) {
+  #event .row {
+    padding: 0 8px;
+  }
+
+  .event h2 {
+    font-size: 18px;
+    /* margin-bottom: 0; */
+  }
+}

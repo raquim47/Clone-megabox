@@ -1,0 +1,143 @@
+#footer {
+  background: #211f1f;
+}
+
+/* footer-sns */
+.footer-sns {
+  position: absolute;
+  right: 17px;
+  top: 33px;
+  z-index: 1;
+}
+
+.footer-sns__item {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 4px;
+}
+
+.footer-sns__item:nth-child(1) {
+  background-position: 0 -375px;
+}
+
+.footer-sns__item:nth-child(2) {
+  background-position: -36px -375px;
+}
+
+.footer-sns__item:nth-child(3) {
+  background-position: -72px -375px;
+}
+
+.footer-sns__item:nth-child(4) {
+  background-position: -108px -375px;
+}
+
+.footer-sns__item:nth-child(5) {
+  background-position: -144px -375px;
+}
+
+.footer-sns__item:nth-child(1):hover {
+  background-position: 0 -411px;
+}
+
+.footer-sns__item:nth-child(2):hover {
+  background-position: -36px -411px;
+}
+
+.footer-sns__item:nth-child(3):hover {
+  background-position: -72px -411px;
+}
+
+.footer-sns__item:nth-child(4):hover {
+  background-position: -108px -411px;
+}
+
+.footer-sns__item:nth-child(5):hover {
+  background-position: -144px -411px;
+}
+
+.footer-sns__tel {
+  padding-top: 5px;
+  text-align: right;
+}
+
+.footer-sns__tel a {
+  color: #8f8f8f;
+  font-size: 21px;
+}
+
+.footer-sns__tel em {
+  color: #fff;
+}
+
+/* footer-info */
+
+.footer-info {
+  width: 80%;
+  padding: 50px 0;
+}
+
+.footer-info h2 img {
+  display: inline-block;
+  width: 150px;
+}
+
+.footer-info__list {
+  padding: 15px 0;
+}
+
+.footer-info__item {
+  display: inline;
+  position: relative;
+  padding-right: 16px;
+  white-space: nowrap;
+  color: #8f8f8f;
+}
+
+.footer-info__item::before {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 1px;
+  height: 11px;
+  background: #8f8f8f;
+}
+
+.footer-info__item:last-child::before {
+  width: 0;
+  height: 0;
+}
+
+.footer-info__address p {
+  padding-bottom: 15px;
+  color: #8f8f8f;
+}
+
+/* media query */
+
+@media (max-width: 960px) {
+  .footer-sns {
+    position: static;
+    padding-bottom: 15px;
+    background: #352c2c;
+    text-align: center;
+  }
+
+  .footer-sns__tel {
+    display: none;
+  }
+
+  .footer-info {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-info {
+    padding: 30px 0;
+  }
+
+}

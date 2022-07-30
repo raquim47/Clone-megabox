@@ -1,0 +1,313 @@
+/* help */
+.help {
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.help__cont {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+
+.help__cont:last-child {
+  margin-right: 0;
+}
+
+.help__box {
+  height: 350px;
+  border: 1px solid #dbdbdb;
+}
+
+
+.help article h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* notice */
+
+.notice {
+  position: relative;
+  padding: 17px;
+}
+
+.notice__list {
+  overflow: hidden;
+}
+
+.notice__item {
+  float: left;
+  text-align: center;
+  margin-right: -1px;
+}
+
+.notice__item > a {
+  display: block;
+  width: 80px;
+  padding: 10px 20px;
+  border: 1px solid #dbdbdb;
+  background-color: #f5f5f5;
+  color: #666;
+  font-size: 15px;
+}
+
+.notice__item.active > a {
+  background: #fff;
+}
+
+.notice__sub {
+  position: absolute;
+  left: 17px;
+  top: 70px;
+  width: 90%;
+}
+
+.notice__sub-item {
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.notice__sub-item:last-child {
+  border-bottom: none;
+}
+
+.notice__sub-item strong {
+  padding-right: 12px;
+}
+
+.notice__sub-item em {
+  color: #999;
+}
+
+.notice__desc {
+  color: #777;
+  padding-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* card */
+.card {
+  padding: 17px;
+}
+
+.card__item {
+  position: relative;
+  min-height: 102px;
+  margin-bottom: 17px;
+  padding: 17px;
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+}
+
+.card__item span {
+  position: absolute;
+  left: 17px;
+  top: 17px;
+}
+
+.card__item img {
+  width: 105px;
+}
+
+.card__item strong {
+  display: block;
+  padding-left: 120px;
+  font-size: 18px;
+  color: #777;
+}
+
+.card__item em {
+  display: block;
+  padding-left: 120px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* service */
+.service {
+  border: none;
+}
+
+.service__list {
+  overflow: hidden;
+}
+
+.service__item {
+  float: left;
+  width: 50%;
+  height: 193px;
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.service__item strong {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.service__icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+
+.service__item:nth-child(1) {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.service__item:nth-child(2) {
+  border-bottom: 0;
+}
+
+.service__item:nth-child(3) {
+  border-right: 0;
+}
+
+/* media query  */
+@media (max-width: 1024px) {
+  .help__cont.cont1 {
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  .help__cont.cont2 {
+    width: 49%;
+    margin-right: 0;
+  }
+
+  .help__cont.cont3 {
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .service {
+    height: auto;
+  }
+
+  .service__item {
+    width: 25%;
+    height: auto;
+  }
+
+  .service__item:nth-child(1) {
+    border-bottom: 1px solid #d7d7d7;
+  }
+
+  .service__item:nth-child(2) {
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 0;
+  }
+
+  .service__item strong {
+    display: block;
+    padding-bottom: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  #help .row {
+    padding: 0 24px;
+  }
+
+  .help__cont.cont1,
+  .help__cont.cont2 {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 24px;
+    padding: 24px;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  .help__cont.cont3 {
+    width: 100%;
+    background: #fff;
+    margin-top: 24px;
+  }
+
+  .help__cont.cont1 h3,
+  .help__cont.cont2 h3 {
+    height: 27px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .help__cont.cont3 h3 {
+    display: none;
+  }
+
+  .service__item {
+    border: none;
+  }
+
+  .service__item:nth-child(1) {
+    border-bottom: 0;
+  }
+
+  .service__item:nth-child(2) {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #help .row {
+    padding: 0 8px;
+  }
+
+  .help {
+    padding-bottom: 8px;
+  }
+
+  .help__cont.cont1,
+  .help__cont.cont2 {
+    margin-top: 8px;
+    padding: 16px;
+  }
+
+  .help__cont.cont3 {
+    margin-top: 8px;
+  }
+
+  .help__cont.cont1 h3,
+  .help__cont.cont2 h3 {
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+
+  .service__item {
+    width: 50%;
+    border: 1px solid #dbdbdb;
+  }
+
+  .service__item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .service__item:nth-child(4) {
+    border-right: 0;
+  }
+
+  .notice__sub {
+    left: 8px;
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .notice__sub-item {
+    padding: 17px 8px;
+  }
+}

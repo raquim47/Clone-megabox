@@ -1,0 +1,263 @@
+#banner {}
+
+/* 배너 메뉴 */
+.banner-menu {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.banner-menu a {
+  color: #fff;
+  font-size: 16px;
+  transition: all .3s;
+}
+
+.banner-menu a:hover {
+  color: #c1c1c1;
+}
+
+/* 배너 메뉴 left */
+.banner-menu__left {
+  float: left;
+}
+
+.banner-menu__left ul {
+  padding-top: 7px;
+}
+
+.banner-menu__left li {
+  position: relative;
+  display: inline;
+  margin-right: 30px;
+}
+
+.banner-menu__left li.total {
+  margin-right: 20px;
+}
+
+.banner-menu__left li.total a {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid #fff;
+  font-size: 14px;
+}
+
+.banner-menu__left li.total a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.banner-menu__left li.line::before,
+.banner-menu__right li.line::before {
+  content: '';
+  position: absolute;
+  right: -18px;
+  top: 2px;
+  width: 1px;
+  height: 14px;
+  background: #fff;
+}
+
+/* 배너 메뉴 right */
+.banner-menu__right {
+  float: right;
+  overflow: hidden;
+}
+
+.banner-menu__right ul {
+  float: left;
+}
+
+.banner-menu__right ul:first-child {
+  padding-top: 7px;
+}
+
+.banner-menu__right li {
+  display: inline;
+  position: relative;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.banner-menu__right li.white {
+  margin-right: 10px;
+}
+
+.banner-menu__right li.purple {
+  margin-right: 0;
+}
+
+.banner-menu__right li.white a,
+.banner-menu__right li.purple a {
+  display: inline-block;
+  width: 80px;
+  padding: 7px 30px 9px 30px;
+}
+
+.banner-menu__right li.white a {
+  background: #fff;
+  color: #3a0e6a;
+}
+
+.banner-menu__right li.purple a {
+  background: #3a0e6a;
+}
+
+/* 슬라이드  */
+
+.slider {
+  width: 100%;
+  height: 600px;
+  color: #fff;
+}
+
+.slider .ss1 {
+  background: url(../../img/main_slider01_2000.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.slider .ss2 {
+  background: url(../../img/main_slider02_2000.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.slider .ss3 {
+  background: url(../../img/main_slider03_2000.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.slider .swiper-slide h2 {
+  display: inline-block;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 48px;
+  font-size: 62px;
+  line-height: 70px;
+}
+
+.slider .swiper-slide h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, .5);
+}
+
+.slider .swiper-slide em {
+  display: block;
+  font-size: 58px;
+  font-weight: 100;
+}
+
+.slider .swiper-slide p {
+  margin-left: 48px;
+  padding-top: 35px;
+  font-size: 27px;
+}
+
+.container.btn-wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width:1280px) {
+  .container.btn-wrap {
+    display: none;
+  }
+
+  .slider .swiper-slide h2,
+  .slider .swiper-slide p {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .banner-menu__left {
+    display: none;
+  }
+
+  .banner-menu__right ul:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .slider {
+    height: 500px;
+  }
+
+  .slider .swiper-slide h2 {
+    margin-top: 170px;
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .slider .swiper-slide h2 em {
+    font-size: 34px;
+  }
+
+  .slider .swiper-slide h2::before {
+    bottom: -20px;
+  }
+
+  .slider .swiper-slide p {
+    font-size: 16px;
+    padding-top: 35px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .banner-menu {
+    top: 16px;
+  }
+
+  .banner-menu__right li.white a,
+  .banner-menu__right li.purple a {
+    padding: 3px 5px 5px 5px;
+    border: 1px solid #fff;
+    background: rgba(0,0,0,.6);
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .slider {
+    height: 400px;
+  }
+
+  .slider .swiper-slide h2 {
+    margin-top: 120px;
+  }
+
+  .slider .swiper-slide h2::before {
+    bottom: -15px;
+  }
+
+  .slider .swiper-slide p {
+    padding-top: 25px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+  }
+}
