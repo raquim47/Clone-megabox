@@ -1,0 +1,15 @@
+/* util style*/
+@import url(utils/reset.css);
+@import url(utils/swiper.css);
+@import url(utils/font-awesome.css);
+@import url(utils/trailer.css);
+
+/* layout style */
+@import url(layout/header.css);
+@import url(layout/banner.css);
+@import url(layout/movie.css);
+@import url(layout/event.css);
+@import url(layout/opening.css);
+@import url(layout/new.css);
+@import url(layout/help.css);
+@import url(layout/footer.css);
