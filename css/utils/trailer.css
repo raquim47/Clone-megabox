@@ -1,0 +1,35 @@
+/* 트레일러 */
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  top: 0;
+  left: 0;
+  z-index: 100
+}
+
+.modal {
+  position: absolute;
+}
+
+.modal-close {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: url(../../img/close.svg) no-repeat;
+  background-size: 32px 32px;
+  color: transparent;
+  text-indent: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+body.modal_on {
+  overflow: hidden;
+}
