@@ -1,115 +1,68 @@
-#banner {}
+.banner {
+  position: relative;
+}
 
-/* 배너 메뉴 */
-.banner-menu {
+/* 서브메뉴 */
+.sub-menu {
   position: absolute;
   left: 0;
   top: 20px;
   width: 100%;
-  height: 100px;
-  overflow: hidden;
   z-index: 10;
 }
 
-.banner-menu a {
-  color: #fff;
-  font-size: 16px;
-  transition: all .3s;
-}
-
-.banner-menu a:hover {
-  color: #c1c1c1;
-}
-
-/* 배너 메뉴 left */
-.banner-menu__left {
-  float: left;
-}
-
-.banner-menu__left ul {
-  padding-top: 7px;
-}
-
-.banner-menu__left li {
-  position: relative;
-  display: inline;
-  margin-right: 30px;
-}
-
-.banner-menu__left li.total {
-  margin-right: 20px;
-}
-
-.banner-menu__left li.total a {
-  display: inline-block;
-  padding: 3px 10px;
-  border: 1px solid #fff;
-  font-size: 14px;
-}
-
-.banner-menu__left li.total a:hover {
-  background: #fff;
-  color: #000;
-}
-
-.banner-menu__left li.line::before,
-.banner-menu__right li.line::before {
-  content: '';
-  position: absolute;
-  right: -18px;
-  top: 2px;
-  width: 1px;
-  height: 14px;
-  background: #fff;
-}
-
-/* 배너 메뉴 right */
-.banner-menu__right {
-  float: right;
-  overflow: hidden;
-}
-
-.banner-menu__right ul {
-  float: left;
-}
-
-.banner-menu__right ul:first-child {
-  padding-top: 7px;
-}
-
-.banner-menu__right li {
-  display: inline;
+.sub-menu li {
   position: relative;
   margin-right: 30px;
   text-align: center;
 }
 
-.banner-menu__right li.white {
+.sub-menu li.line::before {
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: #fff;
+  content: '';
+}
+
+.sub-menu li.white {
   margin-right: 10px;
 }
 
-.banner-menu__right li.purple {
+.sub-menu li.purple {
   margin-right: 0;
 }
 
-.banner-menu__right li.white a,
-.banner-menu__right li.purple a {
+.sub-menu li.white a,
+.sub-menu li.purple a {
   display: inline-block;
   width: 80px;
   padding: 7px 30px 9px 30px;
 }
 
-.banner-menu__right li.white a {
+.sub-menu li.white a {
   background: #fff;
   color: #3a0e6a;
 }
 
-.banner-menu__right li.purple a {
+.sub-menu li.purple a {
   background: #3a0e6a;
 }
 
-/* 슬라이드  */
+.sub-menu a {
+  color: #fff;
+  font-size: 16px;
+  transition: color .3s;
+}
 
+.sub-menu a:hover {
+  color: #c1c1c1;
+}
+
+/* 슬라이드 */
 .slider {
   width: 100%;
   height: 600px;
@@ -150,7 +103,7 @@
   background: rgba(255, 255, 255, .5);
 }
 
-.slider .swiper-slide em {
+.slider .swiper-slide span {
   display: block;
   font-size: 58px;
   font-weight: 100;
@@ -179,7 +132,6 @@
   right: 0;
 }
 
-/* 미디어 쿼리 */
 @media screen and (max-width:1280px) {
   .container.btn-wrap {
     display: none;
@@ -192,11 +144,16 @@
 }
 
 @media screen and (max-width:1024px) {
-  .banner-menu__left {
+  .sub-menu {
+    top: auto;
+    bottom: 80px;
+  }
+
+  .sub-menu__left {
     display: none;
   }
 
-  .banner-menu__right ul:first-child {
+  .sub-menu__right ul:first-child {
     display: none;
   }
 }
@@ -212,7 +169,7 @@
     line-height: 45px;
   }
 
-  .slider .swiper-slide h2 em {
+  .slider .swiper-slide h2 span {
     font-size: 34px;
   }
 
@@ -227,12 +184,8 @@
 }
 
 @media screen and (max-width:600px) {
-  .banner-menu {
-    top: 16px;
-  }
-
-  .banner-menu__right li.white a,
-  .banner-menu__right li.purple a {
+  .sub-menu li.white a,
+  .sub-menu li.purple a {
     padding: 3px 5px 5px 5px;
     border: 1px solid #fff;
     background: rgba(0,0,0,.6);

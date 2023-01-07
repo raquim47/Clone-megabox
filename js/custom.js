@@ -12,6 +12,7 @@ const mySwiper = new Swiper('.swiper-container', {
     delay: 5000
   }
 });
+
 // 영화차트 이미지 슬라이드
 const mySwiper2 = new Swiper('.swiper-container2', {
   slidesPerView: 4,
@@ -42,34 +43,18 @@ const mySwiper2 = new Swiper('.swiper-container2', {
   }
 });
 
+// 무비 차트 텝 메뉴
+const chartTab = $('.m-chart__tab li');
+const slideWrap = $('.chart-slide__wrap');
 
-// 영화 챠트 텝 메뉴
-const movBtn = $('.movie__tab li');
-const movCont = $('.movie-chart__cont');
+slideWrap.hide().eq(0).show();
 
-movCont.hide().eq(0).show();
-
-movBtn.click(function (e) {
+chartTab.click(function (e) {
   e.preventDefault();
   const target = $(this);
   const index = target.index();
-  movBtn.removeClass('active');
+  chartTab.removeClass('active');
   target.addClass('active');
-  movCont.css('display', 'none');
-  movCont.eq(index).css('display', 'block');
+  slideWrap.css('display', 'none');
+  slideWrap.eq(index).css('display', 'block');
 });
-
-// 공지사항 탭 메뉴
-
-const tabMenu = $('.notice');
-
-$('.notice__sub').hide();
-$('.notice__item.active > .notice__sub').show();
-
-function tabList(e) {
-  e.preventDefault();
-  const target = $(this);
-  target.next().show().parent('li').addClass('active').siblings('li').removeClass('active').find('ul').hide();
-}
-
-$('.notice__item > a').click(tabList).focus(tabList);
