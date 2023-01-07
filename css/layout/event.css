@@ -1,5 +1,4 @@
 .event {
-  overflow: hidden;
   padding: 100px 0;
 }
 
@@ -10,28 +9,31 @@
 }
 
 .event__left {
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
   width: 66%;
   margin-right: 2%;
 }
 
-.event__box2,
-.event__box3 {
-  float: left;
-  width: 50%;
-}
-
 .event__right {
-  float: left;
   width: 32%;
 }
 
+.event__box1 {
+  width: 100%;
+}
+
+.event__box2,
+.event__box3 {
+  width: 50%;
+}
+
 @media screen and (max-width:768px) {
-  #event .row {
+  .event {
     padding: 0 24px;
   }
 
-  .event {
+  .event .container {
     padding: 24px;
     background: #fff;
   }
@@ -53,12 +55,11 @@
 }
 
 @media screen and (max-width:600px) {
-  #event .row {
+  .event {
     padding: 0 8px;
   }
 
   .event h2 {
     font-size: 18px;
-    /* margin-bottom: 0; */
   }
 }
