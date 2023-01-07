@@ -1,0 +1,58 @@
+/* 햄버거 메뉴 */
+.hamberger {
+  display: none;
+  position: relative;
+  width: 25px;
+  height: 4px;
+  padding: 5px 0;
+  background-color: #39106a;
+  background-clip: content-box;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.hamberger::before, 
+.hamberger::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #39106a;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  content: '';
+  z-index: 10;
+}
+
+.hamberger::before {
+  top: 100%;
+}
+
+.hamberger::after {
+  bottom: 100%;
+}
+
+#hamberger_active:checked + .hamberger {
+  background-color: transparent;
+}
+
+#hamberger_active:checked + .hamberger::before {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+#hamberger_active:checked + .hamberger::after {
+  transform: translateY(9px) rotate(-45deg);
+}
+
+@media screen and (max-width:1024px) {
+  #hamberger_active:checked ~ .nav__menu {
+    height: 59px; 
+    margin-top: 1px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #hamberger_active:checked ~ .nav__menu {
+    height: 406px;
+  }
+}

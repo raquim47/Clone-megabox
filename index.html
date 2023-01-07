@@ -4,91 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="jin">
   <meta name="description" content="웹표준을 준수한 메가박스 사이트">
   <meta name="keyword" content="메가박스, 영화, 영화관, 영화예매">
   <meta name="generator" content="visual studio code">
-  <title>메가박스</title>
-  <!-- style -->
+
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- 파비콘 -->
   <link rel="shortcut icon" href="icons/favicon.ico">
   <link rel="apple-touch-icon-precomposed" href="icons/favicon_72.png" />
   <link rel="apple-touch-icon-precomposed" sizes="96x96" href="icons/favicon_96.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/favicon_144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="icons/favicon_192.png" />
-
-  <!-- 페이스북 메타 태그 -->
-  <meta property="og:title" content="메가박스 사이트 만들기" />
-  <meta property="og:url" content="https://raquim47.github.io/Clone-megabox/" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/raquim47/data/main/megabox/main.png" />
-  <meta property="og:description" content="메가박스 따라 만들기" />
-
-  <!-- 트위터 메타 태그 -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="메가박스 사이트 만들기">
-  <meta name="twitter:url" content="https://raquim47.github.io/Clone-megabox/">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/raquim47/data/main/megabox/main.png">
-  <meta name="twitter:description" content="메가박스 따라 만들기">
-
-  <!-- 웹 폰트 -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean"
-    rel="stylesheet">
-
-  <!-- HTLM5shiv ie6~8 -->
-  <!--[if lt IE 9]> 
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script type="text/javascript">
-      alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
-    </script><![endif]-->
+  <title>메가박스</title>
 </head>
+
 <!-- 스킵 메뉴 -->
 <div class="skip">
   <a rel="bookmark" href="#movie">최신 영화 소식</a>
   <a rel="bookmark" href="#event">새로운 이벤트</a>
   <a rel="bookmark" href="#new">새로운 영화</a>
 </div>
-<!-- //스킵 메뉴 -->
+
 <body>
   <!-- 헤더 -->
-  <div id="header">
-    <div class="container">
-      <div class="row">
-        <div class="header clearfix">
-          <h1 class="header__logo">
-            <a href="#">
-              <strong><img src="img/logo.png" alt="MEGABOX"></strong>
-              <em><img src="img/logo-sub.png" alt="LIFE THEATER"></em>
-            </a>
-          </h1>
-          <!-- mobile 네비메뉴 -->
-          <nav class="mobile-nav">
-            <h2 class="ir-so">메가박스 전체메뉴</h2>
-            <a href="#" class="mobile-nav__ham">
-              <span></span>
-            </a>
-          </nav>
-          <!-- //mobile 네비메뉴 -->
-          <!-- pc 네비메뉴 -->
-          <nav class="nav">
-            <ul class="nav__list clearfix">
-              <li class="nav__item"><a href="#">영화</a></li>
-              <li class="nav__item"><a href="#">큐레이션</a></li>
-              <li class="nav__item"><a href="#">영화관</a></li>
-              <li class="nav__item"><a href="#">특별관</a></li>
-              <li class="nav__item"><a href="#">스토어</a></li>
-              <li class="nav__item"><a href="#">이벤트</a></li>
-              <li class="nav__item"><a href="#">로그인</a></li>
-            </ul>
-          </nav>
-          <!-- //pc 네비메뉴 -->
-        </div>
-      </div>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="logo">
+        <span class="ir-so">megabox</span>
+        <a class="flex_row" href="https://raquim47.github.io/Clone-megabox/">
+          <img class="logo__main" src="img/logo.png" alt="MEGABOX">
+          <img class="logo__sub" src="img/logo-sub.png" alt="LIFE THEATER">
+        </a>
+      </h1>
+      <!-- 네비 -->
+      <nav class="nav">
+        <!-- 햄버거 버튼 -->
+        <input type="checkbox" id="hamberger_active" class="none">
+        <label for="hamberger_active" class="hamberger">
+          <span class="ir-so">navigation button</span>
+        </label>
+        <!-- 네비 메뉴 -->
+        <ul class="nav__menu">
+          <li class="nav__item"><a href="#">영화</a></li>
+          <li class="nav__item"><a href="#">큐레이션</a></li>
+          <li class="nav__item"><a href="#">영화관</a></li>
+          <li class="nav__item"><a href="#">특별관</a></li>
+          <li class="nav__item"><a href="#">스토어</a></li>
+          <li class="nav__item"><a href="#">이벤트</a></li>
+          <li class="nav__item"><a href="#">로그인</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
   <!-- //헤더 -->
   <!-- 배너 -->
   <section id="banner">
@@ -975,25 +942,29 @@
                     <li class="notice__sub-item">
                       <dl>
                         <dt><strong>강남</strong> <em>2022.01.01</em></dt>
-                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a></dd>
+                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a>
+                        </dd>
                       </dl>
                     </li>
                     <li class="notice__sub-item">
                       <dl>
                         <dt><strong>노원</strong> <em>2022.01.01</em></dt>
-                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a></dd>
+                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a>
+                        </dd>
                       </dl>
                     </li>
                     <li class="notice__sub-item">
                       <dl>
                         <dt><strong>혜화</strong> <em>2022.01.01</em></dt>
-                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a></dd>
+                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a>
+                        </dd>
                       </dl>
                     </li>
                     <li class="notice__sub-item">
                       <dl>
                         <dt><strong>명동</strong> <em>2022.01.01</em></dt>
-                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a></dd>
+                        <dd class="notice__desc"><a href="#">[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</a>
+                        </dd>
                       </dl>
                     </li>
                   </ul>
