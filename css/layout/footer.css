@@ -1,13 +1,59 @@
-#footer {
+.footer {
   background: #211f1f;
+}
+
+.footer .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* footer-info */
+.footer-info {
+  width: 75%;
+  padding: 50px 0;
+}
+
+.footer-info__list {
+  padding: 15px 0;
+}
+
+.footer-info h2 img {
+  display: inline-block;
+  width: 150px;
+}
+
+.footer-info__item {
+  display: inline;
+  position: relative;
+  padding-right: 16px;
+  white-space: nowrap;
+  color: #8f8f8f;
+}
+
+.footer-info__item::before {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 1px;
+  height: 11px;
+  background: #8f8f8f;
+}
+
+.footer-info__item:last-child::before {
+  width: 0;
+  height: 0;
+}
+
+.footer-info__address p {
+  padding-bottom: 15px;
+  font-style: normal;
+  color: #8f8f8f;
 }
 
 /* footer-sns */
 .footer-sns {
-  position: absolute;
-  right: 17px;
-  top: 33px;
-  z-index: 1;
+  padding-top: 50px;
 }
 
 .footer-sns__item {
@@ -68,65 +114,28 @@
 }
 
 .footer-sns__tel em {
+  font-style: normal;
   color: #fff;
 }
 
-/* footer-info */
-
-.footer-info {
-  width: 80%;
-  padding: 50px 0;
-}
-
-.footer-info h2 img {
-  display: inline-block;
-  width: 150px;
-}
-
-.footer-info__list {
-  padding: 15px 0;
-}
-
-.footer-info__item {
-  display: inline;
-  position: relative;
-  padding-right: 16px;
-  white-space: nowrap;
-  color: #8f8f8f;
-}
-
-.footer-info__item::before {
-  content: '';
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 1px;
-  height: 11px;
-  background: #8f8f8f;
-}
-
-.footer-info__item:last-child::before {
-  width: 0;
-  height: 0;
-}
-
-.footer-info__address p {
-  padding-bottom: 15px;
-  color: #8f8f8f;
-}
-
-/* media query */
-
 @media (max-width: 960px) {
+  .footer .flex {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    order: 2;
+    padding-top: 15px;
+  }
+
   .footer-sns {
-    position: static;
-    padding-bottom: 15px;
-    background: #352c2c;
+    width: 100%;
+    padding-top: 15px;
     text-align: center;
   }
 
   .footer-sns__tel {
-    display: none;
+    text-align: center;
   }
 
   .footer-info {
@@ -137,7 +146,7 @@
 
 @media (max-width: 600px) {
   .footer-info {
-    padding: 30px 0;
+    padding-bottom: 15px;
   }
 
 }

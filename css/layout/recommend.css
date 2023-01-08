@@ -134,6 +134,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 /* 메인 텍스트 박스 스타일1 */
 .ui_input {
   width: 100%;
@@ -226,6 +227,10 @@
 }
 
 @media (max-width: 600px) {
+  .recommend {
+    margin: 8px;
+  }
+
   .recommend__title {
     font-size: 18px;
     margin-bottom: 10px;

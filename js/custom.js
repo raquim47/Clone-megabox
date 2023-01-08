@@ -58,3 +58,18 @@ chartTab.click(function (e) {
   slideWrap.css('display', 'none');
   slideWrap.eq(index).css('display', 'block');
 });
+
+// 공지사항 탭 메뉴
+
+const tabMenu = $('.notice');
+
+$('.notice__sub').hide();
+$('.notice__item.active > .notice__sub').show();
+
+function tabList(e) {
+  e.preventDefault();
+  const target = $(this);
+  target.next().show().parent('li').addClass('active').siblings('li').removeClass('active').find('ul').hide();
+}
+
+$('.notice__item > a').click(tabList).focus(tabList);
